@@ -23,3 +23,11 @@ export const useDebounce = <V>(value: V, delay?: number) => {
 
   return debouncedValue
 }
+
+export const useMount = (cb: Function) => {
+  useEffect(() => {
+    if (cb && typeof cb === 'function') {
+      cb()
+    }
+  }, [])
+}

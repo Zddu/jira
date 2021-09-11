@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import {loadDevTools} from "jira-dev-tool";
-import { AuthProviders } from "./context";
+import { AppProviders } from "./context";
 
 loadDevTools(() => ReactDOM.render(
   <React.StrictMode>
-    <AuthProviders>
+    <AppProviders>
       <App />
-    </AuthProviders>
+    </AppProviders>
   </React.StrictMode>,
   document.getElementById('root')
 ))

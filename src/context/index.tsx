@@ -1,12 +1,9 @@
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode } from "react";
 import { AuthProvider } from "./auth-context";
-interface AuthForm {
-  username: string,
-  password: string
+
+export const  AppProviders = ({children}: {children: ReactNode}) => {
+  return <AuthProvider>
+    {children}
+  </AuthProvider>
 }
-
-const AuthContext = React.createContext(undefined)
-AuthContext.displayName = 'AuthContext'
-
-export const  AuthProviders = ({children}: {children: ReactNode}) => <AuthProvider> {children} </AuthProvider>
 
